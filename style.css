@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    overflow: hidden;
+    /* animation: bodyshake linear 6s infinite; */
+}
+
+.sky{
+    height: 100vh;
+    width: 5000vh;
+    background-image: url(images/background.jpg);
+    background-repeat: no-repeat;
+    position:sticky;
+    /* position: absolute; */
+    animation:   skyShake linear 10s infinite ;
+    
+
+}
+
+.tree{
+    width: 290vh;
+    height: 100vh;
+    position: absolute;
+    background-image: url(images/trees.png);
+    background-repeat:repeat-x;
+    background-size: cover;
+    bottom: 20vh;
+    left: 0vh;
+    
+     
+
+}
+.track{
+    width: 5000vh;
+    height:25vh;
+    position: absolute;
+    background-image: url(images/track.png);
+    background-repeat:repeat-x;
+    background-size: cover;
+    bottom: 0;
+    animation:   trackMove linear 9s infinite ;
+   
+     
+
+}
+
+.car{
+    background-image: url(images/car-wheelless.png);
+    background-size: cover;
+    width: 100vh;
+
+    height: 40%;
+    position: absolute;
+    bottom: 50px;
+    left: 350px; 
+    animation:   shake linear .3s infinite ;
+
+}
+
+.wheelf img {
+    height: 128px;
+    width: 136px;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 144px;
+    left: 55px;
+    animation: wheelRotation linear .5s infinite;
+}
+.wheelb img {
+    height: 126px;
+    width: 142px;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 11px;
+    left: 380px;
+    animation: wheelRotation linear .5s infinite;
+}
+@keyframes wheelRotation {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes trackMove {
+    100%{
+        transform: translateX(-500vw)
+    }
+}
+
+
+@keyframes shake {
+    0%{
+        transform: translateY(-1px)
+    }
+    0%{
+        transform: translateY(1px)
+    }
+    0%{
+        transform: translateY(-1px)
+    }
+}
+
+@keyframes skyShake {
+    0%{
+        transform: translateX(-10vw)
+    }
+    
+}
